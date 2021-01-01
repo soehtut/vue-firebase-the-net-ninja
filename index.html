@@ -21,7 +21,10 @@
     <div id="app">
 
         <ul>
-            <li v-for="avenger in avengers">{{ avenger.name }} - {{ avenger.power }}</li>
+            <li v-for="avenger in avengers">
+                <img :src="avenger.img" v-bind:alt="avenger.name">
+                {{ avenger.name }} - {{ avenger.power }}
+            </li>
         </ul>
 
         <!-- Mouse Events -->

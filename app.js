@@ -8,11 +8,13 @@ const app = Vue.createApp({
                     name: 'Thor',
                     power: 'God of Thunder',
                     weapon: 'Hammer',
+                    img: 'assets/img/thor.jpeg'
                 },
                 {
                     name: 'Hulk',
                     power: 'Strong',
                     weapon: 'Fighting',
+                    img: 'assets/img/hulk.jpeg'
                 }
             ],
             x: 0,
