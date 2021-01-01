@@ -9,7 +9,14 @@
 <body>
     
     <div id="app">
-        <p>{{ name }} - {{ power }} - {{ weapon }}</p>
+        <p>{{ name }} - {{ power }} - {{ weapon }} - {{ age }}</p>
+
+        <button v-on:click="age++">Increase Age</button>
+        <button v-on:click="age--">Decrease Age</button>
+
+        <!-- <div @click=" name = 'Name Changed' ">Change Name</div> -->
+        <!-- <div @click="changeName">Change Name</div> -->
+        <div @click="changeName('Name Changed with argument')">Change Name</div>
     </div>
 
     <script src="app.js"></script>
