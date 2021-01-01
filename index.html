@@ -9,14 +9,14 @@
 <body>
     
     <div id="app">
-        <p>{{ name }} - {{ power }} - {{ weapon }} - {{ age }}</p>
+        <p v-if="isAvenger">{{ name }} - {{ power }} - {{ weapon }} - {{ age }}</p>
 
-        <button v-on:click="age++">Increase Age</button>
-        <button v-on:click="age--">Decrease Age</button>
+        <button @click="toggleAvenger">
+            <span v-if="!isAvenger">Show Avenger</span>
+            <span v-else>Hide Avenger</span>
+        </button>
 
-        <!-- <div @click=" name = 'Name Changed' ">Change Name</div> -->
-        <!-- <div @click="changeName">Change Name</div> -->
-        <div @click="changeName('Name Changed with argument')">Change Name</div>
+        <p v-show="isAvenger">{{ name }} - {{ power }} - {{ weapon }} - {{ age }}</p>
     </div>
 
     <script src="app.js"></script>

@@ -6,15 +6,13 @@ const app = Vue.createApp({
             name: 'Thor',
             power: 'God of Thunder',
             weapon: 'Hammer',
-            age: 30
+            age: 30,
+            isAvenger: true
         }
     },
     methods: {
-        // changeName() {
-        //     this.name = 'Name changed with method'
-        // }
-        changeName(name) {
-            this.name = name
+        toggleAvenger() {
+            this.isAvenger = !this.isAvenger
         }
     }
 });
