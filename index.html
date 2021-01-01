@@ -23,7 +23,7 @@
     
     <div id="app">
         <ul>
-            <li v-for="avenger in avengers" :class="{ strongest: avenger.isStrongest }" @click="handleAvenger(avenger)">
+            <li v-for="avenger in filteredAvengers" :class="{ strongest: avenger.isStrongest }" @click="handleAvenger(avenger)">
                 <img :src="avenger.img" width="50" v-bind:alt="avenger.name">
                 {{ avenger.name }} - {{ avenger.power }}
             </li>

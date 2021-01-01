@@ -25,6 +25,11 @@ const app = Vue.createApp({
        handleAvenger(avenger) {
            avenger.isStrongest = !avenger.isStrongest
        }
+    },
+    computed: {
+        filteredAvengers() {
+            return this.avengers.filter((avenger) => avenger.isStrongest)
+        }
     }
 });
 
