@@ -8,30 +8,23 @@ const app = Vue.createApp({
                     name: 'Thor',
                     power: 'God of Thunder',
                     weapon: 'Hammer',
-                    img: 'assets/img/thor.jpeg'
+                    img: 'assets/img/thor.jpeg',
+                    isStrongest: true
                 },
                 {
                     name: 'Hulk',
                     power: 'Strong',
                     weapon: 'Fighting',
-                    img: 'assets/img/hulk.jpeg'
+                    img: 'assets/img/hulk.jpeg',
+                    strongest: false
                 }
-            ],
-            x: 0,
-            y: 0
+            ]
         }
     },
     methods: {
-        handleEvent(e, data) {
-            console.log(e, e.type)
-            if(data) {
-                console.log(data)
-            }
-        },
-        handleMouseMove(e) {
-            this.x = e.offsetX
-            this.y = e.offsetY
-        }
+       handleAvenger(avenger) {
+           avenger.isStrongest = !avenger.isStrongest
+       }
     }
 });
 
