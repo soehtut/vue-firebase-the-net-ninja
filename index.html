@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Learning Vue</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     
@@ -17,6 +27,14 @@
         </button>
 
         <p v-show="isAvenger">{{ name }} - {{ power }} - {{ weapon }} - {{ age }}</p>
+
+        <!-- Mouse Events -->
+
+        <div class="box" @mouseover="handleEvent($event, 5)">Mouse Over</div>
+        <div class="box" @mouseleave="handleEvent">Mouse Leave</div>
+        <div class="box" @dblclick="handleEvent">Double Click</div>
+        <div class="box" @mousemove="handleMouseMove">position - {{ x }} {{ y }}</div>
+
     </div>
 
     <script src="app.js"></script>
