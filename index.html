@@ -19,22 +19,16 @@
 <body>
     
     <div id="app">
-        <p v-if="isAvenger">{{ name }} - {{ power }} - {{ weapon }} - {{ age }}</p>
 
-        <button @click="toggleAvenger">
-            <span v-if="!isAvenger">Show Avenger</span>
-            <span v-else>Hide Avenger</span>
-        </button>
-
-        <p v-show="isAvenger">{{ name }} - {{ power }} - {{ weapon }} - {{ age }}</p>
+        <ul>
+            <li v-for="avenger in avengers">{{ avenger.name }} - {{ avenger.power }}</li>
+        </ul>
 
         <!-- Mouse Events -->
-
         <div class="box" @mouseover="handleEvent($event, 5)">Mouse Over</div>
         <div class="box" @mouseleave="handleEvent">Mouse Leave</div>
         <div class="box" @dblclick="handleEvent">Double Click</div>
         <div class="box" @mousemove="handleMouseMove">position - {{ x }} {{ y }}</div>
-
     </div>
 
     <script src="app.js"></script>

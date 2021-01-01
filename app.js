@@ -3,19 +3,23 @@ const app = Vue.createApp({
     // template: '<h2>This is the template</h2>'
     data() {
         return {
-            name: 'Thor',
-            power: 'God of Thunder',
-            weapon: 'Hammer',
-            age: 30,
-            isAvenger: true,
+            avengers: [
+                {
+                    name: 'Thor',
+                    power: 'God of Thunder',
+                    weapon: 'Hammer',
+                },
+                {
+                    name: 'Hulk',
+                    power: 'Strong',
+                    weapon: 'Fighting',
+                }
+            ],
             x: 0,
             y: 0
         }
     },
     methods: {
-        toggleAvenger() {
-            this.isAvenger = !this.isAvenger
-        },
         handleEvent(e, data) {
             console.log(e, e.type)
             if(data) {
